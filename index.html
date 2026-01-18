@@ -15,8 +15,8 @@
 
     <script>
         // 1=password on, 0=skip password
-        const ENABLE_PASSWORD = 0;
-        const PASSWORD = "1234";
+        const ENABLE_PASSWORD = 1;
+        const PASSWORD = "nathan is the best";
 
         function startGame() {
             if (document.getElementById("login")) document.getElementById("login").style.display = "none";
@@ -31,8 +31,6 @@
                 alert("Wrong password");
             }
         }
-
-        // Auto-start if password disabled
         if (ENABLE_PASSWORD === 0) window.addEventListener("load", startGame);
     </script>
 </head>
