@@ -3,27 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>Snow Rider 3D</title>
-    <link rel="stylesheet" href="style.css">
+
     <script src="UnityProgress.js"></script>
     <script src="UnityLoader.js"></script>
+
     <script>
         function checkPassword() {
-            if (document.getElementById('pw').value === '1234') {
-                document.getElementById('login').style.display = 'none';
-                document.getElementById('game').style.display = 'block';
-                UnityLoader.instantiate("game", "config.json", {onProgress: UnityProgress});
+            if (document.getElementById("pw").value === "1234") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("game").style.display = "block";
+                UnityLoader.instantiate("game", "config.json", { onProgress: UnityProgress });
             } else {
-                alert('Wrong password');
+                alert("Wrong password");
             }
         }
     </script>
 </head>
-<body style="margin:0; background:#231F20; color:white; font-family:sans-serif; text-align:center;">
-    <div id="login" style="padding-top:100px;">
-        <h1>Enter Password</h1>
-        <input type="password" id="pw" style="padding:10px;">
-        <button onclick="checkPassword()" style="padding:10px;">Enter</button>
+
+<body>
+    <div id="login">
+        Password:
+        <input type="password" id="pw">
+        <button onclick="checkPassword()">Enter</button>
     </div>
-    <div id="game" style="display:none; width:100vw; height:100vh;"></div>
+
+    <div id="game" style="display:none;"></div>
 </body>
 </html>
