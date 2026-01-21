@@ -17,7 +17,6 @@
         // 1=password on, 0=skip password
         const ENABLE_PASSWORD = 1;
         const PASSWORD = "nathan is the best";
-        const status = localStorage.getItem('isLoggedIn');
         
 
         function startGame() {
@@ -33,7 +32,7 @@
             }
         }
         if (ENABLE_PASSWORD === 0) window.addEventListener("load", startGame);
-        if (status == 1) {
+        if (localStorage.getItem('isLoggedIn') !== null) {
             startGame();
         }
     </script>
