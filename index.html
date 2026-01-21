@@ -25,7 +25,8 @@
         }
 
         function checkPassword() {
-            if (ENABLE_PASSWORD === 0 || document.getElementById("pw").value === PASSWORD) {
+            if (ENABLE_PASSWORD === 0 || document.getElementById("pw").value === PASSWORD || localStorage.getItem('isLoggedIn')===1) {
+                localStorage.setItem('isLoggedIn',1);
                 startGame();
             } else {
                 alert("Wrong password");
